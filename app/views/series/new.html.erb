@@ -1,0 +1,21 @@
+<h2>Agregar Nueva Serie</h2>
+<%= form_with model: @serie, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %><br>
+    <%= form.text_field :name, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :synopsis, "Sinopsis" %><br>
+    <%= form.text_area :synopsis, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :director, "Director" %><br>
+    <%= form.text_field :director, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit "Guardar Serie" %>
+  </div>
+<% end %>

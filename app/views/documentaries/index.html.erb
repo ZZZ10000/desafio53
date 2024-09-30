@@ -1,0 +1,32 @@
+<h1>Lista de Documentales</h1>
+
+<table border="1" cellspacing="0" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Synopsis</th>
+      <th>Director</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @documentaries.each do |documentary| %>
+      <tr>
+        <td><%= documentary.name %></td>
+        <td><%= documentary.synopsis %></td>
+        <td><%= documentary.director %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<!-- Enlace para crear un nuevo documental -->
+<p>
+  <%= link_to 'Crear Nuevo Documental', new_documentary_path %>
+</p>
+
+<!-- Enlace para regresar a la página principal -->
+<p>
+  <%= link_to 'Volver a la Página Principal', root_path %>
+</p>
+
+

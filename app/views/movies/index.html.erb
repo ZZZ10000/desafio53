@@ -1,0 +1,30 @@
+<h1>Movies#index</h1>
+<p>Find me in app/views/movies/index.html.erb</p>
+
+
+
+<h1>All Movies</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Synopsis</th>
+      <th>Director</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.name %></td>
+        <td><%= movie.synopsis %></td>
+        <td><%= movie.director %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<!-- Enlace para crear una nueva película -->
+<%= link_to 'Crear nueva película', new_movie_path %>
+
+

@@ -1,0 +1,30 @@
+<h1>Lista de Series</h1>
+
+<!-- Tabla para mostrar las series -->
+<table border="1" cellspacing="0" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Sinopsis</th>
+      <th>Director</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @series.each do |serie| %>
+      <tr>
+        <td><%= serie.name %></td>
+        <td><%= serie.synopsis %></td>
+        <td><%= serie.director %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+<!-- Enlace para volver a la página principal -->
+<p>
+  <%= link_to 'Volver a la Página Principal', root_path %>
+</p>
+
